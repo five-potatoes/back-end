@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### 서버 주소 및 api 토큰 키 ###
+/src/main/kotlin/com/example/demo/data/
