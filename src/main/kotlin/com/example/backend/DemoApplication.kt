@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.backend
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -6,6 +6,6 @@ import org.springframework.boot.runApplication
 @SpringBootApplication
 class DemoApplication
 
-fun main(args: Array<String>) {
+fun main(args: Array<String>) { 
     runApplication<DemoApplication>(*args)
 }
