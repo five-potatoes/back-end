@@ -1,7 +1,5 @@
 package com.example.demo.api
 
-import org.springframework.core.io.InputStreamResource
-import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 import java.io.File
@@ -19,12 +17,15 @@ class TranslationController {
      */
     
     @PostMapping("/v2t")
-    fun getVideoToTextTranslation(@RequestParam("file") file: MultipartFile?): String {
+    fun getVideoToTextTranslation(@RequestParam("file") file: MultipartFile?)
+    : String {
+
         // 파일을 저장하고, 그 파일의 이름을 저장한다.
-        val fileName = uploadFile(file)
+//        val fileName = uploadFile(file)
 
         // 저장한 파일의 파일 이름을 통해 번역 요청
-        val translateResult = aiResult(fileName)
+//        val translateResult = aiResult(fileName)
+        val translateResult = "안녕하세요. 반갑습니다."
 
         // 반환받은 번역결과를 프론트에 전송한다.
         return translateResult
@@ -59,7 +60,8 @@ class TranslationController {
 
     @PostMapping("/t2v")
     fun getTextToVideoTranslation(@RequestParam("text") text : String)
-    : ResponseEntity<InputStreamResource> {
+    //: ResponseEntity<InputStreamResource> {
+    : String {
         // 전달받은 문자열을 분할한다. 조사는 떼고 단어만 추출한다.
         // ai hub를 통해 전달한다.
 
@@ -70,7 +72,7 @@ class TranslationController {
         // 전달받은 영상을 합친다.
 
 
-
+        return "동영상이 전송되었습니다."
     }
 
 
