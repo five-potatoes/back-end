@@ -9,6 +9,7 @@ import java.time.format.DateTimeFormatter
 
 @RestController
 @RequestMapping("/translation")
+@CrossOrigin(origins = ["*"])
 class TranslationController {
     /*
     * multipartFile 을 이용하여 동영상을 전송받는다.
@@ -79,4 +80,3 @@ class TranslationController {
     @GetMapping("/test")
     fun getTest() : String = "this is test"
 }
-
