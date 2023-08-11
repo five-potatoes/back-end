@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter
 
 @RestController
 @RequestMapping("/translation")
-@CrossOrigin(origins = ["*"])
+@CrossOrigin(origins = ["http://43.202.29.199:8000", ])
 class TranslationController {
     /*
     * multipartFile 을 이용하여 동영상을 전송받는다.
