@@ -22,11 +22,10 @@ class TranslationController {
     : String {
 
         // 파일을 저장하고, 그 파일의 이름을 저장한다.
-//        val fileName = uploadFile(file)
+        val fileName = uploadFile(file)
 
         // 저장한 파일의 파일 이름을 통해 번역 요청
-//        val translateResult = aiResult(fileName)
-        val translateResult = "안녕하세요. 반갑습니다."
+        val translateResult = aiResult(fileName)
 
         // 반환받은 번역결과를 프론트에 전송한다.
         return translateResult
@@ -50,6 +49,8 @@ class TranslationController {
         val outputStream = FileOutputStream(newFile)
         file?.bytes?.let { outputStream.write(it) }
         outputStream.close()
+
+        println(newFile.name)
 
         return newFile.name
     }
